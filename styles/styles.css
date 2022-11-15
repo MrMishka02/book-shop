@@ -1,10 +1,12 @@
 body{
     max-width: 1600px;
     height: 830px;
+    box-sizing: border-box;
     margin: auto;
     scroll-behavior: smooth;
     background-color: azure;
     overflow-x: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .sect1{
     width: 100%;
@@ -23,26 +25,70 @@ body{
     width: 80%;
     top: 8%;
     color: antiquewhite;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 70px;
     text-transform: uppercase;
     font-weight: 600;
     line-height: 140px;
 }
-.sect2{
-    width: 100%;
-    height: 70%;
+#sect2{
+    width: 98%;
+    height: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.div2{
+    width: 98%;
+    height: 50px;
+    margin: auto;
 }
 .myh1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #9B4802;
-    left: 5%;
-    position: relative;
 }
 .container{
+    width: 18%;
+    height: 410px;
+    border: 1px solid #9B4802;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.book_img{
+    width: 191px;
+    height: 251px;
+    margin-left: 13%;
+}
+.title{
+    font-size: 15px;
+    margin-left: 5px;
+}
+.auth{
+    font-size: small;
+    margin: 0 5px 5px 5px;
+    color: #8A8A8A;
+}
+.price{
     position: relative;
-    width: 98%;
-    height: 900px;
-    background-color: aqua;
-    margin: auto;
+    font-size: 20px;
+    margin: 0 5px 5px;
+    color: #9B4802;
+}
+.btnDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.btnPop{
+    background: transparent;
+    cursor: pointer;
+    margin: 0 5px 5px;
+    border-radius: 5px;
+}
+.btnBag{
+    background: transparent;
+    cursor: pointer;
+    margin: 0 5px 5px;
+    border-radius: 5px;
 }

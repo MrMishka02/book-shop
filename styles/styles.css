@@ -5,7 +5,7 @@ body{
     margin: auto;
     scroll-behavior: smooth;
     background-color: azure;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .sect1{
@@ -49,12 +49,17 @@ body{
     color: #9B4802;
 }
 .container{
-    width: 18%;
-    height: 410px;
+    width: 270px;
+    height: 380px;
     border: 1px solid #9B4802;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.container:hover .btnDiv{
+    visibility: visible;
+    transition: 1s;
+    transform: translateY(-6px);
 }
 .book_img{
     width: 191px;
@@ -78,17 +83,68 @@ body{
 }
 .btnDiv{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    position: absolute;
+    width: 270px;
+    margin-top: 11%;
+    visibility: hidden;
+    background-color: white;
 }
 .btnPop{
-    background: transparent;
     cursor: pointer;
-    margin: 0 5px 5px;
-    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: #9B4802;
+    border: none;
+    text-transform: uppercase;
 }
+
 .btnBag{
-    background: transparent;
     cursor: pointer;
-    margin: 0 5px 5px;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    color: white;
+    background-color: #049821;
+    border: none;
+    text-transform: uppercase;
+}
+
+.popuptext{
+    position: absolute;
+}
+
+#descrDiv{
+    width: 270px;
+    height: 380px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #707270;
+    display: none;
+}
+
+#descrSpan{
+    font-size: 16px;
+    margin: 0px 10px 0 10px;
+    color: white;
+}
+
+#descrBtn{
+    width: 80px;
+    height: 30px;
+    text-transform: uppercase;
+    border: none;
     border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+#descrBtn:hover{
+    background-color: #049821;
+    color: white;
 }

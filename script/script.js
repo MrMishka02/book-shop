@@ -36,9 +36,12 @@ const div3 = document.createElement('div');
 document.body.append(div3);
 div3.id = 'sect2';
 
+
+
+
 //Books Catalog
 function appendData(data) {
-    const books = document.getElementById("sect2");
+    var books = document.getElementById("sect2");
     for (var i = 0; i < data.length; i++) {
         var div4 = document.createElement("div");
         var img = document.createElement("img");
@@ -54,29 +57,31 @@ function appendData(data) {
 
         var btnDiv = document.createElement("div");
         btnDiv.className = "btnDiv";
+
         var btnPop = document.createElement("button");
         btnPop.className = "btnPop";
-        btnPop.id = "btnInfo";
-        btnPop.onclick = popFunction;
-        btnPop.innerHTML = "Show more";
+        btnPop.innerText = "Show more";
+        btnDiv.appendChild(btnPop);
+
         var btnBag = document.createElement("button");
         btnBag.className = "btnBag";
         btnBag.innerHTML = "Add to Bag";
-        btnDiv.appendChild(btnPop);
         btnDiv.appendChild(btnBag);
 
         var descrDiv = document.createElement("div");
-        var descrSpan = document.createElement("span");
-        var descrBtn = document.createElement("button");
+        descrDiv.id = 'descrDiv';
+        descrDiv.className = "descrDiv";
 
-        descrDiv.id = "descrDiv";
+        var descrSpan = document.createElement("span");
         descrSpan.id = "descrSpan";
-        descrBtn.id = "descrBtn";
-        descrBtn.onclick = closeFunction;
         descrSpan.innerHTML = data[i].description;
-        descrBtn.innerHTML = "close";
+
+        var closeBtn = document.createElement("button");
+        closeBtn.innerHTML = "close";
+        closeBtn.id = 'closeBtn';
+        closeBtn.onclick = closeFunction;
         descrDiv.appendChild(descrSpan);
-        descrSpan.after(descrBtn);
+        descrSpan.after(closeBtn);
 
         img.src = data[i].imageLink;
         auth_p.innerHTML = data[i].author;
@@ -90,11 +95,46 @@ function appendData(data) {
         btnDiv.after(descrDiv);
         books.appendChild(div4);
     }
-  }
-
-  function popFunction() {
-    document.getElementById("descrDiv").style.display = "flex";
-  }
-  function closeFunction() {
-    document.getElementById("descrDiv").style.display = "none";
+      let btn = document.querySelectorAll('.btnPop');
+      let divs = document.querySelectorAll('.descrDiv');
+      for (var i = 0; i < btn.length; i++) {
+        btn[0].addEventListener("click", function(){
+            divs[0].style.display = "flex";
+        })
+        btn[1].addEventListener("click", function(){
+          divs[1].style.display = "flex";
+        })
+        btn[2].addEventListener("click", function(){
+        divs[2].style.display = "flex";
+        })
+        btn[3].addEventListener("click", function(){
+        divs[3].style.display = "flex";
+        })
+        btn[4].addEventListener("click", function(){
+        divs[4].style.display = "flex";
+        })
+        btn[5].addEventListener("click", function(){
+        divs[5].style.display = "flex";
+        })
+        btn[6].addEventListener("click", function(){
+        divs[6].style.display = "flex";
+        })
+        btn[7].addEventListener("click", function(){
+        divs[7].style.display = "flex";
+        })
+        btn[8].addEventListener("click", function(){
+        divs[8].style.display = "flex";
+        })
+        btn[9].addEventListener("click", function(){
+        divs[9].style.display = "flex";
+        })
+      }
+    function closeFunction() {
+      let btn = document.querySelectorAll('#closeBtn');
+      let divs = document.querySelectorAll('.descrDiv');
+      for (var i = 0; i < btn.length; i++) {
+        btn[i] = divs[i].style.display = "none";
+        console.log(btn[i]);
+      }
+    }
   }

@@ -99,34 +99,124 @@ function appendData(data) {
       let divs = document.querySelectorAll('.descrDiv');
       for (var i = 0; i < btn.length; i++) {
         btn[0].addEventListener("click", function(){
-            divs[0].style.display = "flex";
+        divs[0].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[2].style.display = "none";
+        divs[3].style.display = "none";
+        divs[4].style.display = "none";
+        divs[5].style.display = "none";
+        divs[6].style.display = "none";
+        divs[7].style.display = "none";
+        divs[8].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[1].addEventListener("click", function(){
-          divs[1].style.display = "flex";
+        divs[1].style.display = "flex";
+        divs[0].style.display = "none";
+        divs[2].style.display = "none";
+        divs[3].style.display = "none";
+        divs[4].style.display = "none";
+        divs[5].style.display = "none";
+        divs[6].style.display = "none";
+        divs[7].style.display = "none";
+        divs[8].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[2].addEventListener("click", function(){
         divs[2].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[0].style.display = "none";
+        divs[3].style.display = "none";
+        divs[4].style.display = "none";
+        divs[5].style.display = "none";
+        divs[6].style.display = "none";
+        divs[7].style.display = "none";
+        divs[8].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[3].addEventListener("click", function(){
         divs[3].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[2].style.display = "none";
+        divs[0].style.display = "none";
+        divs[4].style.display = "none";
+        divs[5].style.display = "none";
+        divs[6].style.display = "none";
+        divs[7].style.display = "none";
+        divs[8].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[4].addEventListener("click", function(){
         divs[4].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[2].style.display = "none";
+        divs[3].style.display = "none";
+        divs[0].style.display = "none";
+        divs[5].style.display = "none";
+        divs[6].style.display = "none";
+        divs[7].style.display = "none";
+        divs[8].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[5].addEventListener("click", function(){
         divs[5].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[2].style.display = "none";
+        divs[3].style.display = "none";
+        divs[4].style.display = "none";
+        divs[0].style.display = "none";
+        divs[6].style.display = "none";
+        divs[7].style.display = "none";
+        divs[8].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[6].addEventListener("click", function(){
         divs[6].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[2].style.display = "none";
+        divs[3].style.display = "none";
+        divs[4].style.display = "none";
+        divs[5].style.display = "none";
+        divs[0].style.display = "none";
+        divs[7].style.display = "none";
+        divs[8].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[7].addEventListener("click", function(){
         divs[7].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[2].style.display = "none";
+        divs[3].style.display = "none";
+        divs[4].style.display = "none";
+        divs[5].style.display = "none";
+        divs[6].style.display = "none";
+        divs[0].style.display = "none";
+        divs[8].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[8].addEventListener("click", function(){
         divs[8].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[2].style.display = "none";
+        divs[3].style.display = "none";
+        divs[4].style.display = "none";
+        divs[5].style.display = "none";
+        divs[6].style.display = "none";
+        divs[7].style.display = "none";
+        divs[0].style.display = "none";
+        divs[9].style.display = "none";
         })
         btn[9].addEventListener("click", function(){
         divs[9].style.display = "flex";
+        divs[1].style.display = "none";
+        divs[2].style.display = "none";
+        divs[3].style.display = "none";
+        divs[4].style.display = "none";
+        divs[5].style.display = "none";
+        divs[6].style.display = "none";
+        divs[7].style.display = "none";
+        divs[8].style.display = "none";
+        divs[0].style.display = "none";
         })
       }
     function closeFunction() {

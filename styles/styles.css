@@ -1,16 +1,15 @@
 body{
     max-width: 1600px;
-    height: 830px;
+    height: 1000px;
     box-sizing: border-box;
     margin: auto;
     scroll-behavior: smooth;
     background-color: azure;
-    /* overflow-x: hidden; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .sect1{
     width: 100%;
-    height: 98%;
+    height: 850px;
     background-image: url(../images/books.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,6 +29,24 @@ body{
     font-weight: 600;
     line-height: 140px;
 }
+.spans2{
+    position: relative;
+    width: 80%;
+    top: 8%;
+    color: antiquewhite;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    top: 280px;
+}
+.arrowImg{
+    width: 100px;
+    cursor: pointer;
+}
+.arrowA{
+    position: relative;
+    top: 280px;
+}
 #sect2{
     width: 98%;
     height: 1000px;
@@ -41,12 +58,37 @@ body{
 
 }
 .div2{
-    width: 98%;
+    width: 80%;
     height: 50px;
     margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cartDiv{
+    width: 170px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #9B4802;
+    cursor: pointer;
 }
 .myh1{
     color: #9B4802;
+}
+.cartImg{
+    width: 50px;
+}
+.cartH2{
+    color: #9B4802;
+    margin-left: 10px;
+}
+.cartP{
+    font-size: 22px;
+    color: #8A8A8A;
+    margin-left: 5px;
 }
 .container{
     width: 270px;
@@ -101,6 +143,31 @@ body{
     text-transform: uppercase;
 }
 
+.popDiv{
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.popDiv::backdrop{
+    background-color: #8A8A8A;
+    opacity: 0.7;
+}
+
+.popHead{
+    display: flex;
+    justify-content: space-between;
+}
+
+.popClose{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .btnBag{
     cursor: pointer;
     width: 100%;
@@ -111,41 +178,22 @@ body{
     border: none;
     text-transform: uppercase;
 }
-
-.popuptext{
-    position: absolute;
-}
-
-.descrDiv{
-    width: 270px;
-    height: 380px;
-    z-index: 1;
-    position: absolute;
+.foot{
+    width: 100%;
+    height: 50px;
+    background-color: lightslategray;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: #707270;
-    display: none;
+    text-align: center;
 }
 
-#descrSpan{
+.footA{
     font-size: 16px;
-    margin: 0px 10px 0 10px;
-    color: white;
-    line-height: 25px;
-}
-
-#closeBtn{
-    width: 80px;
-    height: 30px;
     text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
-    font-weight: 700;
+    text-decoration: none;
+    color: #9B4802;
     cursor: pointer;
-}
-#closeBtn:hover{
-    background-color: #049821;
-    color: white;
+    display: flex;
+    align-items: center;
 }

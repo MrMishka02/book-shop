@@ -1,0 +1,117 @@
+body{
+    margin: auto;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.deliveryBody{
+    width: 800px;
+    height: 100%;
+    margin: auto;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid;
+}
+
+.head h1{
+    color: #9B4802;
+}
+
+.head img{
+    width: 60px;
+}
+
+.middle{
+    width: 57%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inputs{
+    height: 30px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.invalid{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 30px;
+}
+.invalid p{
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: red;
+    visibility: hidden;
+}
+
+.checks{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.completeBtn{
+    width: 150px;
+    margin: auto;
+}
+
+.popup{
+    width: 400px;
+    height: fit-content;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+#adress{
+    font-size: 16px;
+    color: black;
+}
+
+.cross{
+    font-size: 24px;
+    position: relative;
+    margin-left: 90%;
+    cursor: pointer;
+}
+
+.footer{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+.footer a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer h4{
+    margin-right: 5px;
+}

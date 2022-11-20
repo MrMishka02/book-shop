@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="deliveryBody">
+    <div class="deliveryBody" id="deliveryBody">
         <div class="head">
             <h1>Confirm order</h1>
             <a href="catalog.html" class="home">
@@ -21,43 +21,43 @@
             <div class="inputs">
                 <label for="name">Name</label>
                 <div class="invalid">
-                    <input type="text" id="name">
-                    <p>&lt;= The field is invalid!</p>
+                    <input type="text" id="name" required>
+                    <p id="invName">&lt;= The field is invalid!</p>
                 </div>
             </div>
             <div class="inputs">
                 <label for="surname">Surname</label>
                 <div class="invalid">
                     <input type="text" id="surname">
-                    <p>&lt;= The field is invalid!</p>
+                    <p id="invSurname">&lt;= The field is invalid!</p>
                 </div>
             </div>
             <div class="inputs">
                 <label for="delivery">Delivery date</label>
                 <div class="invalid">
                 <input type="date">
-                <p>&lt;= The field is invalid!</p>
+                <p id="invDate">&lt;= The field is invalid!</p>
                 </div>
             </div>
             <div class="inputs">
                 <label for="street">Street</label>
                 <div class="invalid">
                     <input type="text" id="street">
-                    <p>&lt;= The field is invalid!</p>
+                    <p id="invStreet">&lt;= The field is invalid!</p>
                 </div>
             </div>
             <div class="inputs">
                 <label for="house">House number</label>
                 <div class="invalid">
                     <input type="text" id="house">
-                    <p>&lt;= The field is invalid!</p>
+                    <p id="invHouse">&lt;= The field is invalid!</p>
                 </div>
             </div>
             <div class="inputs">
                 <label for="flat">Flat number</label>
                 <div class="invalid">
                     <input type="text" id="flat">
-                    <p>&lt;= The field is invalid!</p>
+                    <p id="invFlat">&lt;= The field is invalid!</p>
                 </div>
             </div>
             <div class="inputs">
@@ -73,7 +73,7 @@
                     <label for="gift3"><input type="checkbox" id="gift3" class="double"> Provide 2% discount to the next time</label>
                     <label for="gift4"><input type="checkbox" id="gift4" class="double"> Branded pen or pencil</label>
                 </div>
-                <button type="submit" class="completeBtn" id="completeBtn">Complete</button>
+                <button type="submit" class="completeBtn" id="completeBtn" disabled>Complete</button>
             </div>
         <div class="footer">
             <a href="https://github.com/MrMishka02">
@@ -83,43 +83,13 @@
             </a>
         </div>
     </div>
-    <div class="popup" id="popup">
+    <dialog class="popup" id="popup">
         <span class="cross" id="cross">&times;</span>
         <h2>The order created!</h2>
         <p id="adress"></p>
         <h3>Thank you!</h3>
-    </div>
+    </dialog>
 
-    <script>
-        var double = document.querySelectorAll(".double");
-        var max = 2;
-        for (var i = 0; i < double.length; i++)
-        double[i].onclick = selectiveCheck;
-        function selectiveCheck (event) {
-        var checkedChecks = document.querySelectorAll(".double:checked");
-        if (checkedChecks.length >= max + 1)
-        return false;
-        }
-
-        var deliveryPop = document.getElementById("popup");
-        var btn = document.getElementById("completeBtn");
-        var crossX = document.getElementById("cross");
-        btn.addEventListener("click", () => {
-            var name = document.getElementById("name").value;
-            var surName = document.getElementById("surname").value;
-            var street = document.getElementById("street").value;
-            var house = document.getElementById("house").value;
-            var flat = document.getElementById("flat").value;
-            document.getElementById("adress").innerHTML = "The delivery adress is:" + " " + name + " " + surName + ", " + street + " street" + ", N" + house + ",  N" + flat;
-            deliveryPop.style.visibility = "visible";
-            const back = document.querySelector(".deliveryBody")
-            back.style.opacity = "0.5"
-        });
-        crossX.addEventListener("click", () =>{
-            deliveryPop.style.visibility = "hidden";
-            const back = document.querySelector(".deliveryBody");
-            back.style.opacity = "1";
-        });
-    </script>
+    <script src="../scripts/delivery.js"></script>
 </body>
 </html>

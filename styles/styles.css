@@ -180,7 +180,7 @@ body{
 .foot{
     width: 100%;
     height: 50px;
-    background-color: lightslategray;
+    background-color: lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,10 +189,86 @@ body{
 
 .footA{
     font-size: 16px;
-    text-transform: uppercase;
     text-decoration: none;
     color: #9B4802;
     cursor: pointer;
     display: flex;
     align-items: center;
+}
+
+.cartBox{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    min-height: 200px;
+    top: 113%;
+    left: 71%;
+    z-index: 2;
+    border: 2px solid #9B4802;
+    background-color: lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.cartHead{
+    width: 98%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #9B4802;
+}
+
+.cartTotal{
+    display: flex;
+    align-items: center;
+}
+
+.totalP{
+    margin-left: 5px;
+}
+
+.cartClose{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cartCentdiv{
+    width: 100%;
+    min-height: 150px;
+    height: fit-content;
+}
+
+.cartBtndiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.confirmBtn{
+    width: 150px;
+    height: 30px;
+}
+.confirmBtn:hover{
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: #049821;
+}
+
+.clearmBtn{
+    width: 150px;
+    height: 30px;
+}
+.clearmBtn:hover{
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: red;
 }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/delivery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="deliveryBody">
+        <div class="head">
+            <h1>Confirm order</h1>
+            <a href="catalog.html" class="home">
+                <img src="../images/home.png" alt="Home logo">
+            </a>
+        </div>
+        <div class="middle">
+            <div class="inputs">
+                <label for="name">Name</label>
+                <div class="invalid">
+                    <input type="text" id="name">
+                    <p>&lt;= The field is invalid!</p>
+                </div>
+            </div>
+            <div class="inputs">
+                <label for="surname">Surname</label>
+                <div class="invalid">
+                    <input type="text" id="surname">
+                    <p>&lt;= The field is invalid!</p>
+                </div>
+            </div>
+            <div class="inputs">
+                <label for="delivery">Delivery date</label>
+                <div class="invalid">
+                <input type="date">
+                <p>&lt;= The field is invalid!</p>
+                </div>
+            </div>
+            <div class="inputs">
+                <label for="street">Street</label>
+                <div class="invalid">
+                    <input type="text" id="street">
+                    <p>&lt;= The field is invalid!</p>
+                </div>
+            </div>
+            <div class="inputs">
+                <label for="house">House number</label>
+                <div class="invalid">
+                    <input type="text" id="house">
+                    <p>&lt;= The field is invalid!</p>
+                </div>
+            </div>
+            <div class="inputs">
+                <label for="flat">Flat number</label>
+                <div class="invalid">
+                    <input type="text" id="flat">
+                    <p>&lt;= The field is invalid!</p>
+                </div>
+            </div>
+            <div class="inputs">
+                <label for="choose">Choose the payment type:
+                <input type="radio" name="payment" id="cash" checked><label for="cash"> Cash</label>
+                <input type="radio" name="payment" id="card"><label for="card"> Card</label>
+                </label>
+            </div>
+                <p>Choose 2 gifts:</p>
+                <div class="checks">
+                    <label for="gift1"><input type="checkbox" id="gift1" class="double"> Pack as a gift</label>
+                    <label for="gift2"><input type="checkbox" id="gift2" class="double"> Add postcard</label>
+                    <label for="gift3"><input type="checkbox" id="gift3" class="double"> Provide 2% discount to the next time</label>
+                    <label for="gift4"><input type="checkbox" id="gift4" class="double"> Branded pen or pencil</label>
+                </div>
+                <button type="submit" class="completeBtn" id="completeBtn">Complete</button>
+            </div>
+        <div class="footer">
+            <a href="https://github.com/MrMishka02">
+                <h4>Mikheil Gogia</h4>
+                <br>
+                <i class="fa fa-github" style="font-size:24px"></i>
+            </a>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <span class="cross" id="cross">&times;</span>
+        <h2>The order created!</h2>
+        <p id="adress"></p>
+        <h3>Thank you!</h3>
+    </div>
+
+    <script>
+        var double = document.querySelectorAll(".double");
+        var max = 2;
+        for (var i = 0; i < double.length; i++)
+        double[i].onclick = selectiveCheck;
+        function selectiveCheck (event) {
+        var checkedChecks = document.querySelectorAll(".double:checked");
+        if (checkedChecks.length >= max + 1)
+        return false;
+        }
+
+        var deliveryPop = document.getElementById("popup");
+        var btn = document.getElementById("completeBtn");
+        var crossX = document.getElementById("cross");
+        btn.addEventListener("click", () => {
+            var name = document.getElementById("name").value;
+            var surName = document.getElementById("surname").value;
+            var street = document.getElementById("street").value;
+            var house = document.getElementById("house").value;
+            var flat = document.getElementById("flat").value;
+            document.getElementById("adress").innerHTML = "The delivery adress is:" + " " + name + " " + surName + ", " + street + " street" + ", N" + house + ",  N" + flat;
+            deliveryPop.style.visibility = "visible";
+            const back = document.querySelector(".deliveryBody")
+            back.style.opacity = "0.5"
+        });
+        crossX.addEventListener("click", () =>{
+            deliveryPop.style.visibility = "hidden";
+            const back = document.querySelector(".deliveryBody");
+            back.style.opacity = "1";
+        });
+    </script>
+</body>
+</html>

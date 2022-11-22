@@ -18,61 +18,65 @@
             </a>
         </div>
         <div class="middle">
-            <div class="inputs">
-                <label for="name">Name</label>
-                <div class="invalid">
-                    <input type="text" id="name" required>
-                    <p id="invName">&lt;= The field is invalid!</p>
+            <div class="inputsBox">
+                <div class="inputs">
+                    <label for="name">Name</label>
+                    <div class="invalid">
+                        <input type="text" id="name" required>
+                        <p id="invName">The field is invalid!</p>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <label for="surname">Surname</label>
+                    <div class="invalid">
+                        <input type="text" id="surname">
+                        <p id="invSurname">The field is invalid!</p>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <label for="delivery">Delivery date</label>
+                    <div class="invalid">
+                    <input type="date">
+                    <p id="invDate">The field is invalid!</p>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <label for="street">Street</label>
+                    <div class="invalid">
+                        <input type="text" id="street">
+                        <p id="invStreet">The field is invalid!</p>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <label for="house">House number</label>
+                    <div class="invalid">
+                        <input type="text" id="house">
+                        <p id="invHouse">The field is invalid!</p>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <label for="flat">Flat number</label>
+                    <div class="invalid">
+                        <input type="text" id="flat">
+                        <p id="invFlat">The field is invalid!</p>
+                    </div>
                 </div>
             </div>
-            <div class="inputs">
-                <label for="surname">Surname</label>
-                <div class="invalid">
-                    <input type="text" id="surname">
-                    <p id="invSurname">&lt;= The field is invalid!</p>
-                </div>
-            </div>
-            <div class="inputs">
-                <label for="delivery">Delivery date</label>
-                <div class="invalid">
-                <input type="date">
-                <p id="invDate">&lt;= The field is invalid!</p>
-                </div>
-            </div>
-            <div class="inputs">
-                <label for="street">Street</label>
-                <div class="invalid">
-                    <input type="text" id="street">
-                    <p id="invStreet">&lt;= The field is invalid!</p>
-                </div>
-            </div>
-            <div class="inputs">
-                <label for="house">House number</label>
-                <div class="invalid">
-                    <input type="text" id="house">
-                    <p id="invHouse">&lt;= The field is invalid!</p>
-                </div>
-            </div>
-            <div class="inputs">
-                <label for="flat">Flat number</label>
-                <div class="invalid">
-                    <input type="text" id="flat">
-                    <p id="invFlat">&lt;= The field is invalid!</p>
-                </div>
-            </div>
-            <div class="inputs">
+            <div class="payInputs">
                 <label for="choose">Choose the payment type:
                 <input type="radio" name="payment" id="cash" checked><label for="cash"> Cash</label>
                 <input type="radio" name="payment" id="card"><label for="card"> Card</label>
                 </label>
             </div>
-                <p>Choose 2 gifts:</p>
+            <div class="gifts">
+                <p class="giftsP">Choose 2 gifts:</p>
                 <div class="checks">
                     <label for="gift1"><input type="checkbox" id="gift1" class="double"> Pack as a gift</label>
                     <label for="gift2"><input type="checkbox" id="gift2" class="double"> Add postcard</label>
                     <label for="gift3"><input type="checkbox" id="gift3" class="double"> Provide 2% discount to the next time</label>
                     <label for="gift4"><input type="checkbox" id="gift4" class="double"> Branded pen or pencil</label>
                 </div>
+            </div>
                 <button type="submit" class="completeBtn" id="completeBtn" disabled>Complete</button>
             </div>
         <div class="footer">

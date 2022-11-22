@@ -31,13 +31,12 @@ body{
 }
 .spans2{
     position: relative;
-    width: 80%;
-    top: 8%;
     color: antiquewhite;
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 600;
-    top: 280px;
+    display: flex;
+    flex-direction: column;
 }
 .arrowImg{
     width: 100px;
@@ -46,6 +45,7 @@ body{
 .arrowA{
     position: relative;
     top: 280px;
+    text-decoration: none;
 }
 #sect2{
     width: 98%;
@@ -97,6 +97,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 10px;
 }
 .container:hover .btnDiv{
     visibility: visible;

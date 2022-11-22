@@ -17,47 +17,61 @@ var double = document.querySelectorAll(".double");
             const invalid = document.getElementById("invName");
                 if (name1.value == null || name1.value == "") {
                     invalid.style.visibility = "visible";
+                    name1.style.borderColor = "red";
+                    name1.style.borderRadius = "5px";
                     return false;
                 }
                 else{
                     invalid.style.visibility = "hidden";
-                    return true;
+                    name1.style.borderColor = "black";
                 }
         })
         surname.addEventListener("focusout", () => {
             const invalid = document.getElementById("invSurname");
                 if (surname.value == null || surname.value == "") {
                     invalid.style.visibility = "visible";
+                    surname.style.borderColor = "red";
+                    surname.style.borderRadius = "5px";
                 }
                 else{
                     invalid.style.visibility = "hidden";
-                    return true;
+                    surname.style.borderColor = "black";
                 }
         })
         street.addEventListener("focusout", () => {
             const invalid = document.getElementById("invStreet");
                 if (street.value == null || street.value == "") {
                     invalid.style.visibility = "visible";
+                    street.style.borderColor = "red";
+                    street.style.borderRadius = "5px";
                 }
                 else{
                     invalid.style.visibility = "hidden";
-                    return true;
+                    street.style.borderColor = "black";
                 }
         })
         house.addEventListener("focusout", () => {
             const invalid = document.getElementById("invHouse");
                 if (house.value == null || house.value == "") {
                     invalid.style.visibility = "visible";
+                    house.style.borderColor = "red";
+                    house.style.borderRadius = "5px";
+                }
+                else{
+                    invalid.style.visibility = "hidden";
+                    house.style.borderColor = "black";
                 }
         })
         flat.addEventListener("focusout", () => {
             const invalid = document.getElementById("invFlat");
                 if (flat.value == null || flat.value == "") {
                     invalid.style.visibility = "visible";
+                    flat.style.borderColor = "red";
+                    flat.style.borderRadius = "5px";
                 }
                 else{
                     invalid.style.visibility = "hidden";
-                    return true;
+                    flat.style.borderColor = "black";
                 }
         })
 
@@ -72,6 +86,7 @@ var double = document.querySelectorAll(".double");
             var flat = document.getElementById("flat").value;
             document.getElementById("adress").innerHTML = "The delivery adress is:" + " " + name + " " + surName + ", " + street + " street" + ", N" + house + ",  N" + flat;
             deliveryPop.showModal();
+            deliveryPop.style.transform = "scale(1)";
         });
         crossX.addEventListener("click", () =>{
             deliveryPop.close();

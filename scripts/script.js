@@ -9,6 +9,9 @@ fetch('../books.json')
     console.log('error: ' + err);
 });
 
+alert(`I'm currently working on it.  Please don't rush evaluation. :)`);
+
+
 //fisrt section
 const div1 = document.createElement('div');
 div1.className = "sect1";
@@ -16,23 +19,19 @@ document.body.append(div1);
 
 const span1 = document.createElement('span');
 span1.className = 'spans';
-span1.innerText = "welcome";
+span1.innerText = "welcome!";
 
 const span2 = document.createElement('span');
 span2.className = 'spans';
 span2.innerText = "discover the best books with us";
 
-const span3 = document.createElement('span');
-span3.className = 'spans2';
-span3.innerText = "scroll down for";
-
-const span4 = document.createElement('span');
-span4.className = 'spans2';
-span4.innerText = "books";
-
 const arrowA = document.createElement("a");
 arrowA.className = "arrowA";
 arrowA.href = "#myH1";
+
+const span3 = document.createElement('span');
+span3.className = 'spans2';
+span3.innerText = "Shop now";
 
 const arrowImg = document.createElement("img");
 arrowImg.className = "arrowImg";
@@ -40,10 +39,10 @@ arrowImg.src = "../images/arrow.png"
 
 div1.appendChild(span1);
 div1.appendChild(span2);
-div1.appendChild(span3);
-div1.appendChild(span4);
-div1.appendChild(arrowA);
+arrowA.appendChild(span3)
 arrowA.appendChild(arrowImg);
+div1.appendChild(arrowA);
+
 
 //Collection
 const div2 = document.createElement('div');

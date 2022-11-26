@@ -1,17 +1,3 @@
-fetch('../books.json')
-.then(function (response) {
-    return response.json();
-})
-.then(function (data) {
-    appendData(data);
-})
-.catch(function (err) {
-    console.log('error: ' + err);
-});
-
-alert(`I'm currently working on it.  Please don't rush evaluation. :)`);
-
-
 //fisrt section
 const div1 = document.createElement('div');
 div1.className = "sect1";
@@ -25,24 +11,8 @@ const span2 = document.createElement('span');
 span2.className = 'spans';
 span2.innerText = "to amazing book shop!";
 
-const arrowA = document.createElement("a");
-arrowA.className = "arrowA";
-arrowA.href = "#myH1";
-
-const span3 = document.createElement('span');
-span3.className = 'spans2';
-span3.innerText = "Shop now";
-
-const arrowImg = document.createElement("img");
-arrowImg.className = "arrowImg";
-arrowImg.src = "../images/arrow.png"
-
 div1.appendChild(span1);
 div1.appendChild(span2);
-arrowA.appendChild(span3)
-arrowA.appendChild(arrowImg);
-div1.appendChild(arrowA);
-
 
 //Collection
 const div2 = document.createElement('div');
@@ -69,7 +39,7 @@ cartH2.className = "cartH2";
 cartH2.innerText = "My Cart";
 cartDiv.appendChild(cartH2);
 
-const cartP = document.createElement("frag");
+const cartP = document.createElement("p");
 cartP.className = "cartP";
 cartP.innerHTML = 0;
 cartDiv.appendChild(cartP);
@@ -80,31 +50,40 @@ document.body.append(div3);
 div3.id = 'sect2';
 
 //Books Catalog
-function appendData(data) {
-    var books = document.getElementById("sect2");
-    for (var i = 0; i < data.length; i++) {
+fetch("../books.json")
+    .then(response => {
+        if(!response.ok){
+        throw Error('ERROR');
+        }
+    return response.json();
+    })
+    .then(data => {
+        var info = data;
+        info.map((arr) => {
+
         var div4 = document.createElement("div");
         div4.className = "container";
+        var books = document.getElementById("sect2");
         books.appendChild(div4);
 
         var img = document.createElement("img");
         img.className = "book_img";
-        img.src = data[i].imageLink;
+        img.src = `${arr.imageLink}`;
         div4.appendChild(img);
 
         var auth_p = document.createElement("p");
         auth_p.className = "auth";
-        auth_p.innerHTML = data[i].author;
+        auth_p.innerHTML = `${arr.author}`;
         div4.appendChild(auth_p);
 
         var title_p = document.createElement("p");
         title_p.className = "title";
-        title_p.innerHTML = data[i].title;
+        title_p.innerHTML = `${arr.title}`;
         div4.appendChild(title_p);
 
         var price_p = document.createElement("p");
         price_p.className = "price";
-        price_p.innerHTML = data[i].price + "$";
+        price_p.innerHTML = `${arr.price}` + "$";
         div4.appendChild(price_p);
 
         var btnDiv = document.createElement("div");
@@ -122,7 +101,7 @@ function appendData(data) {
         popDiv.appendChild(popHead)
 
         const popH2 = document.createElement("h2");
-        popH2.innerHTML = data[i].title;
+        popH2.innerHTML = `${arr.title}`;
         popHead.appendChild(popH2);
 
         const popClose = document.createElement("button");
@@ -131,7 +110,7 @@ function appendData(data) {
         popHead.appendChild(popClose);
 
         const popP = document.createElement("p");
-        popP.innerHTML = data[i].description;
+        popP.innerHTML = `${arr.description}`;
         popDiv.appendChild(popP);
 
         var btnPop = document.createElement("button");
@@ -145,18 +124,14 @@ function appendData(data) {
         btnBag.innerHTML = "Add to Bag";
         btnDiv.appendChild(btnBag);
 
-const btn = document.querySelectorAll(".btnPop");
-const pSpn = document.querySelector(".popDiv");
-const closeBtn = document.querySelector(".popClose");
-
-    btn[i].addEventListener("click", () => {
-        pSpn.showModal();
-    })
-    closeBtn.addEventListener("click", () => {
-        pSpn.close();
-    })
-  }
-}
+    btnPop.onclick = function() {
+        popDiv.showModal();
+    }
+    popClose.onclick = function() {
+        popDiv.close();
+    }
+  })
+});
 
     const cartBox = document.createElement("div");
     cartBox.className = "cartBox";

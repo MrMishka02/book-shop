@@ -19,11 +19,11 @@ document.body.append(div1);
 
 const span1 = document.createElement('span');
 span1.className = 'spans';
-span1.innerText = "welcome!";
+span1.innerText = "welcome";
 
 const span2 = document.createElement('span');
 span2.className = 'spans';
-span2.innerText = "discover the best books with us";
+span2.innerText = "to amazing book shop!";
 
 const arrowA = document.createElement("a");
 arrowA.className = "arrowA";

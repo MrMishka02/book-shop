@@ -41,8 +41,68 @@ cartDiv.appendChild(cartH2);
 
 const cartP = document.createElement("p");
 cartP.className = "cartP";
+cartP.id = "cartP";
 cartP.innerHTML = 0;
 cartDiv.appendChild(cartP);
+
+//Cart items
+const cartBox = document.createElement("div");
+cartBox.className = "cartBox";
+document.body.append(cartBox);
+
+const cartHead = document.createElement("div");
+cartHead.className = "cartHead";
+cartBox.appendChild(cartHead);
+
+const cartTotal = document.createElement("div");
+cartTotal.className = "cartTotal"
+cartHead.appendChild(cartTotal)
+
+const cartH3 = document.createElement("h3");
+cartH3.innerHTML = "Total:";
+cartTotal.appendChild(cartH3);
+
+const totalP = document.createElement("p");
+totalP.className = "totalP";
+totalP.innerHTML = 0 + "$";
+cartTotal.appendChild(totalP);
+
+const cartClose = document.createElement("button");
+cartClose.className = "cartClose";
+cartClose.innerHTML = "&times;";
+cartHead.appendChild(cartClose);
+
+const cartCentdiv = document.createElement("div");
+cartCentdiv.className = "cartCentdiv";
+cartCentdiv.id = "cartCentdiv";
+cartBox.appendChild(cartCentdiv)
+
+const cartBtndiv = document.createElement("div");
+cartBtndiv.className = "cartBtndiv";
+cartBox.appendChild(cartBtndiv);
+
+const confirmBtn = document.createElement("button");
+confirmBtn.className = "confirmBtn";
+confirmBtn.innerHTML = "Confirm order";
+confirmBtn.onclick = redirect;
+cartBtndiv.appendChild(confirmBtn);
+
+const clearBtn = document.createElement("button");
+clearBtn.className = "clearmBtn";
+clearBtn.innerHTML = "Clear all"
+cartBtndiv.appendChild(clearBtn);
+
+function redirect () {
+    window.location.href = "../pages/delivery.html";
+}
+
+const cartShow = document.getElementsByClassName("cartBox");
+cartDiv.addEventListener("click", function() {
+cartBox.style.visibility = "visible";
+})
+cartClose.addEventListener("click", function(){
+cartBox.style.visibility = "hidden";
+})
 
 //Second section
 const div3 = document.createElement('div');
@@ -130,65 +190,41 @@ fetch("../books.json")
     popClose.onclick = function() {
         popDiv.close();
     }
+    btnBag.onclick = function() {
+        const cartBuyDiv = document.createElement("div");
+        cartBuyDiv.className = "cartBuyDiv";
+
+        const cartBookImg = document.createElement("img");
+        cartBookImg.src = `${arr.imageLink}`;
+        cartBookImg.className = "cartBookImg";
+        cartBuyDiv.appendChild(cartBookImg);
+
+        const cartTitle = document.createElement("p");
+        cartTitle.innerHTML = `${arr.title}`;
+        cartTitle.className = "cartTitle";
+        cartBuyDiv.appendChild(cartTitle);
+
+        const cartPrice = document.createElement("p");
+        cartPrice.className = "cartPrice";
+        cartPrice.innerHTML = `${arr.price}` + "$";
+        cartBuyDiv.appendChild(cartPrice);
+
+        const cartItemDel = document.createElement("button");
+        cartItemDel.innerHTML = "&times;";
+        cartItemDel.className = "cartItemDel";
+        cartBuyDiv.appendChild(cartItemDel);
+
+        const total = document.getElementsByClassName("cartP");
+        total.innerHTML = cartBuyDiv.length;
+        const cartAppend = document.getElementById("cartCentdiv");
+        cartAppend.append(cartBuyDiv);
+
+        const cartP = document.getElementById("cartP");
+        cartP.innerHTML = cartAppend.childNodes.length;
+        cartP.style.color = "red";
+    }
   })
 });
-
-    const cartBox = document.createElement("div");
-    cartBox.className = "cartBox";
-    document.body.append(cartBox);
-
-    const cartHead = document.createElement("div");
-    cartHead.className = "cartHead";
-    cartBox.appendChild(cartHead);
-
-    const cartTotal = document.createElement("div");
-    cartTotal.className = "cartTotal"
-    cartHead.appendChild(cartTotal)
-
-    const cartH3 = document.createElement("h3");
-    cartH3.innerHTML = "Total:";
-    cartTotal.appendChild(cartH3);
-
-    const totalP = document.createElement("p");
-    totalP.className = "totalP";
-    totalP.innerHTML = 0 + "$";
-    cartTotal.appendChild(totalP);
-
-    const cartClose = document.createElement("button");
-    cartClose.className = "cartClose";
-    cartClose.innerHTML = "&times;";
-    cartHead.appendChild(cartClose);
-
-    const cartCentdiv = document.createElement("div");
-    cartCentdiv.className = "cartCentdiv";
-    cartBox.appendChild(cartCentdiv)
-
-    const cartBtndiv = document.createElement("div");
-    cartBtndiv.className = "cartBtndiv";
-    cartBox.appendChild(cartBtndiv)
-
-    const confirmBtn = document.createElement("button");
-    confirmBtn.className = "confirmBtn";
-    confirmBtn.innerHTML = "Confirm order";
-    confirmBtn.onclick = redirect;
-    cartBtndiv.appendChild(confirmBtn);
-
-    const clearBtn = document.createElement("button");
-    clearBtn.className = "clearmBtn";
-    clearBtn.innerHTML = "Clear all"
-    cartBtndiv.appendChild(clearBtn);
-
-    function redirect () {
-        window.location.href = "../pages/delivery.html";
-    }
-
-const cartShow = document.getElementsByClassName("cartBox");
-cartDiv.addEventListener("click", function() {
-    cartBox.style.visibility = "visible";
-})
-cartClose.addEventListener("click", function(){
-    cartBox.style.visibility = "hidden";
-})
 
 const foot = document.createElement("div");
 foot.className = "foot";

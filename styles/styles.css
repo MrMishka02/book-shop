@@ -7,6 +7,7 @@ body{
     background-color: azure;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .sect1{
     width: 98%;
     height: 400px;
@@ -22,6 +23,7 @@ body{
     margin: auto;
     margin-top: 10px;
 }
+
 .spans{
     position: relative;
     width: 80%;
@@ -32,6 +34,7 @@ body{
     font-weight: 600;
     line-height: 140px;
 }
+
 .spans2{
     position: relative;
     color: antiquewhite;
@@ -41,15 +44,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-.arrowImg{
-    width: 100px;
-    cursor: pointer;
-}
-.arrowA{
-    position: relative;
-    top: 280px;
-    text-decoration: none;
-}
+
 #sect2{
     width: 98%;
     height: 1000px;
@@ -58,8 +53,8 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
 }
+
 .div2{
     width: 80%;
     height: 50px;
@@ -69,6 +64,7 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+
 .cartDiv{
     width: 170px;
     height: 90%;
@@ -78,21 +74,26 @@ body{
     border: 2px solid #9B4802;
     cursor: pointer;
 }
+
 .myh1{
     color: #9B4802;
 }
+
 .cartImg{
     width: 50px;
 }
+
 .cartH2{
     color: #9B4802;
     margin-left: 10px;
 }
+
 .cartP{
     font-size: 22px;
     color: #8A8A8A;
     margin-left: 5px;
 }
+
 .container{
     width: 270px;
     height: 380px;
@@ -102,31 +103,37 @@ body{
     justify-content: space-between;
     border-radius: 10px;
 }
+
 .container:hover .btnDiv{
     visibility: visible;
     transition: 1s;
     transform: translateY(-6px);
 }
+
 .book_img{
     width: 191px;
     height: 251px;
     margin-left: 13%;
 }
+
 .title{
     font-size: 15px;
     margin-left: 5px;
 }
+
 .auth{
     font-size: small;
     margin: 0 5px 5px 5px;
     color: #8A8A8A;
 }
+
 .price{
     position: relative;
     font-size: 20px;
     margin: 0 5px 5px;
     color: #9B4802;
 }
+
 .btnDiv{
     display: flex;
     flex-direction: column;
@@ -137,6 +144,7 @@ body{
     visibility: hidden;
     background-color: white;
 }
+
 .btnPop{
     cursor: pointer;
     width: 100%;
@@ -205,7 +213,7 @@ body{
     width: 400px;
     height: auto;
     min-height: 200px;
-    top: 113%;
+    top: 61%;
     left: 71%;
     z-index: 2;
     border: 2px solid #9B4802;
@@ -246,7 +254,9 @@ body{
 .cartCentdiv{
     width: 100%;
     min-height: 150px;
+    max-height: 400px;
     height: fit-content;
+    overflow-y: scroll;
 }
 
 .cartBtndiv{
@@ -275,4 +285,30 @@ body{
     color: white;
     font-weight: bold;
     background-color: red;
+}
+
+.cartBuyDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartBookImg{
+    width: 20%;
+    margin-bottom: 5px;
+}
+
+.cartTitle{
+    width: 60%;
+    font-size: 12px;
+}
+
+.cartItemDel{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    color: red;
 }

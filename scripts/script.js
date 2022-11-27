@@ -98,12 +98,14 @@ function redirect () {
     window.location.href = "../pages/delivery.html";
 }
 
-const cartShow = document.getElementsByClassName("cartBox");
 cartDiv.addEventListener("click", function() {
-cartBox.style.visibility = "visible";
+    cartBox.style.visibility == "visible"
 })
 cartClose.addEventListener("click", function(){
-cartBox.style.visibility = "hidden";
+    cartBox.style.visibility = "hidden";
+})
+document.addEventListener("click", function(){
+    cartBox.style.visibility = "hidden";
 })
 
 //Second section

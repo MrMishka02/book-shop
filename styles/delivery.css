@@ -1,12 +1,11 @@
 body{
-    margin: auto;
-    max-width: 100vW;
+    margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .deliveryBody{
     width: 500px;
-    height: 95vh;
+    height: 94vh;
     margin: auto;
     margin-top: 10px;
     background-color: antiquewhite;

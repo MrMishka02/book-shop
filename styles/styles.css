@@ -276,11 +276,11 @@ body{
     background-color: #049821;
 }
 
-.clearmBtn{
+.clearBtn{
     width: 150px;
     height: 30px;
 }
-.clearmBtn:hover{
+.clearBtn:hover{
     cursor: pointer;
     color: white;
     font-weight: bold;

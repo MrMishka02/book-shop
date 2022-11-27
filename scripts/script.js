@@ -89,7 +89,8 @@ confirmBtn.onclick = redirect;
 cartBtndiv.appendChild(confirmBtn);
 
 const clearBtn = document.createElement("button");
-clearBtn.className = "clearmBtn";
+clearBtn.className = "clearBtn";
+clearBtn.id = "clearBtn";
 clearBtn.innerHTML = "Clear all"
 cartBtndiv.appendChild(clearBtn);
 
@@ -231,10 +232,18 @@ fetch("../books.json")
             cartItemDel.closest("div").remove();
             cartP.innerHTML = cartAppend.childNodes.length;
             cartP.style.color = "red";
-            totalP.innerHTML = parseInt(totalP.innerHTML) - Number.parseInt(arr.price) + "$";
+            totalP.innerHTML = `${parseInt(totalP.innerHTML) - Number.parseInt(arr.price)}\$`;
             if (cartP.innerHTML == 0) {
                 cartP.style.color = "#8A8A8A";
             }
+        }
+
+        const clearBtn = document.getElementById("clearBtn");
+        clearBtn.onclick = function() {
+            cartAppend.innerHTML = "";
+            totalP.innerHTML = 0 + "$";
+            cartP.innerHTML = 0;
+            cartP.style.color = "#8A8A8A";
         }
     }
   })

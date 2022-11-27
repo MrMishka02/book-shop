@@ -1,14 +1,12 @@
 body{
     margin: auto;
     max-width: 100vW;
-    height: 860px;
-    overflow: hidden;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .deliveryBody{
     width: 500px;
-    height: 98vh;
+    height: 95vh;
     margin: auto;
     margin-top: 10px;
     background-color: antiquewhite;

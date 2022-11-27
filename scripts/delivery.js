@@ -90,7 +90,7 @@ var double = document.querySelectorAll(".double");
         });
         crossX.addEventListener("click", () =>{
             deliveryPop.close();
-            window.location.reload();
+            window.location.href = "../pages/catalog.html";
         });
 
 

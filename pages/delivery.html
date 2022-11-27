@@ -29,35 +29,35 @@
                 <div class="inputs">
                     <label for="surname">Surname</label>
                     <div class="invalid">
-                        <input type="text" id="surname">
+                        <input type="text" id="surname" required>
                         <p id="invSurname">The field is invalid!</p>
                     </div>
                 </div>
                 <div class="inputs">
                     <label for="delivery">Delivery date</label>
                     <div class="invalid">
-                    <input type="date">
+                    <input type="date" required>
                     <p id="invDate">The field is invalid!</p>
                     </div>
                 </div>
                 <div class="inputs">
                     <label for="street">Street</label>
                     <div class="invalid">
-                        <input type="text" id="street">
+                        <input type="text" id="street" pattern="[a-zA-Z0-9-]" required>
                         <p id="invStreet">The field is invalid!</p>
                     </div>
                 </div>
                 <div class="inputs">
                     <label for="house">House number</label>
                     <div class="invalid">
-                        <input type="text" id="house">
+                        <input type="number" id="house" required>
                         <p id="invHouse">The field is invalid!</p>
                     </div>
                 </div>
                 <div class="inputs">
                     <label for="flat">Flat number</label>
                     <div class="invalid">
-                        <input type="text" id="flat">
+                        <input type="number" id="flat" required>
                         <p id="invFlat">The field is invalid!</p>
                     </div>
                 </div>

@@ -99,12 +99,9 @@ function redirect () {
 }
 
 cartDiv.addEventListener("click", function() {
-    cartBox.style.visibility == "visible"
+    cartBox.style.visibility = "visible";
 })
 cartClose.addEventListener("click", function(){
-    cartBox.style.visibility = "hidden";
-})
-document.addEventListener("click", function(){
     cartBox.style.visibility = "hidden";
 })
 

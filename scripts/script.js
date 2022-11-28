@@ -1,6 +1,7 @@
 //fisrt section
 const div1 = document.createElement('div');
 div1.className = "sect1";
+div1.id = "sect1";
 document.body.append(div1);
 
 const span1 = document.createElement('span');
@@ -48,6 +49,7 @@ cartDiv.appendChild(cartP);
 //Cart items
 const cartBox = document.createElement("div");
 cartBox.className = "cartBox";
+cartBox.id = "cartBox";
 document.body.append(cartBox);
 
 const cartHead = document.createElement("div");
@@ -124,11 +126,15 @@ fetch("../books.json")
 
         var div4 = document.createElement("div");
         div4.className = "container";
+        div4.id = "container";
+        div4.draggable = true;
+
         var books = document.getElementById("sect2");
         books.appendChild(div4);
 
         var img = document.createElement("img");
         img.className = "book_img";
+        img.draggable = false;
         img.src = `${arr.imageLink}`;
         div4.appendChild(img);
 
@@ -191,7 +197,10 @@ fetch("../books.json")
     popClose.onclick = function() {
         popDiv.close();
     }
-    btnBag.onclick = function() {
+
+    btnBag.addEventListener("click", addToCart);
+
+    function addToCart() {
         const cartBuyDiv = document.createElement("div");
         cartBuyDiv.className = "cartBuyDiv";
 
@@ -243,10 +252,23 @@ fetch("../books.json")
             totalP.innerHTML = 0 + "$";
             cartP.innerHTML = 0;
             cartP.style.color = "#8A8A8A";
+            }
         }
-    }
-  })
+
+        div4.addEventListener("dragstart", function(){
+            cartBox.style.visibility = "visible";
+            document.getElementById("sect1").style.opacity = "0.2";
+            document.getElementById("sect2").style.opacity = "0.2";
+        })
+
+        div4.addEventListener("dragend", function(){
+            addToCart();
+            document.getElementById("sect1").style.opacity = "1";
+            document.getElementById("sect2").style.opacity = "1";
+        })
+    })
 });
+
 
 //Footer
 const foot = document.createElement("div");

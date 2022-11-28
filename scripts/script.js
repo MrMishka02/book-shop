@@ -191,7 +191,7 @@ fetch("../books.json")
     popClose.onclick = function() {
         popDiv.close();
     }
-    btnBag.onclick = function(sumCartItems) {
+    btnBag.onclick = function() {
         const cartBuyDiv = document.createElement("div");
         cartBuyDiv.className = "cartBuyDiv";
 
@@ -248,6 +248,7 @@ fetch("../books.json")
   })
 });
 
+//Footer
 const foot = document.createElement("div");
 foot.className = "foot";
 

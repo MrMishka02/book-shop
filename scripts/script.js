@@ -15,7 +15,7 @@ span2.innerText = "to amazing book shop!";
 div1.appendChild(span1);
 div1.appendChild(span2);
 
-//Collection
+//Books catalog h1 and Cart button
 const div2 = document.createElement('div');
 div2.className = "div2"
 document.body.append(div2);
@@ -46,7 +46,7 @@ cartP.id = "cartP";
 cartP.innerHTML = 0;
 cartDiv.appendChild(cartP);
 
-//Cart items
+//Cart window
 const cartBox = document.createElement("div");
 cartBox.className = "cartBox";
 cartBox.id = "cartBox";
@@ -96,13 +96,15 @@ clearBtn.id = "clearBtn";
 clearBtn.innerHTML = "Clear all"
 cartBtndiv.appendChild(clearBtn);
 
+//Open delivery form
 function redirect () {
     window.location.href = "../pages/delivery.html";
 }
-
+//Open cart
 cartDiv.addEventListener("click", function() {
     cartBox.style.visibility = "visible";
 })
+//Close cart
 cartClose.addEventListener("click", function(){
     cartBox.style.visibility = "hidden";
 })
@@ -191,15 +193,17 @@ fetch("../books.json")
         btnBag.innerHTML = "Add to Bag";
         btnDiv.appendChild(btnBag);
 
+    //Open description popup
     btnPop.onclick = function() {
         popDiv.showModal();
     }
+    //Close description popup
     popClose.onclick = function() {
         popDiv.close();
     }
 
+    //Add item to cart
     btnBag.addEventListener("click", addToCart);
-
     function addToCart() {
         const cartBuyDiv = document.createElement("div");
         cartBuyDiv.className = "cartBuyDiv";
@@ -236,6 +240,7 @@ fetch("../books.json")
         const totalP = document.getElementById("totalP");
         totalP.innerHTML = parseInt(totalP.innerHTML) + Number.parseInt(arr.price) + "$";
 
+        //Delete each item from cart
         cartItemDel.onclick = function (){
             cartItemDel.closest("div").remove();
             cartP.innerHTML = cartAppend.childNodes.length;
@@ -246,6 +251,7 @@ fetch("../books.json")
             }
         }
 
+        //Clear all items from cart
         const clearBtn = document.getElementById("clearBtn");
         clearBtn.onclick = function() {
             cartAppend.innerHTML = "";
@@ -255,6 +261,7 @@ fetch("../books.json")
             }
         }
 
+        //Drag and drop
         div4.addEventListener("dragstart", function(){
             cartBox.style.visibility = "visible";
             document.getElementById("sect1").style.opacity = "0.2";

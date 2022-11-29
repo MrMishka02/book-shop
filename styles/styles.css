@@ -1,6 +1,4 @@
 body{
-    max-width: 1600px;
-    height: 1000px;
     box-sizing: border-box;
     margin: auto;
     scroll-behavior: smooth;
@@ -95,7 +93,7 @@ body{
 }
 
 .container{
-    width: 270px;
+    width: 17%;
     height: 380px;
     border: 1px solid #9B4802;
     display: flex;
@@ -113,21 +111,24 @@ body{
 .book_img{
     width: 191px;
     height: 251px;
-    margin-left: 13%;
+    margin: auto;
 }
 
 .title{
+    height: 30px;
     font-size: 15px;
     margin-left: 5px;
 }
 
 .auth{
+    height: 30px;
     font-size: small;
     margin: 0 5px 5px 5px;
     color: #8A8A8A;
 }
 
 .price{
+    height: 30px;
     position: relative;
     font-size: 20px;
     margin: 0 5px 5px;
@@ -139,7 +140,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    width: 270px;
+    width: 16.7%;
     margin-top: 11%;
     visibility: hidden;
     background-color: white;
@@ -192,7 +193,7 @@ body{
 .foot{
     width: 100%;
     height: 50px;
-    background-color: lightgrey;
+    background-color: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,8 +214,7 @@ body{
     width: 400px;
     height: auto;
     min-height: 200px;
-    top: 61%;
-    left: 71%;
+    right: 4%;
     z-index: 2;
     border: 2px solid #9B4802;
     background-color: lightgrey;
